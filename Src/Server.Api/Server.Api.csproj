@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{398C1F13-DC50-4EEF-8669-ED3D77F95A28}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kurs.Api.Server</RootNamespace>
+    <AssemblyName>Server.Api</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\AdapterUpdateDescription.cs" />
+    <Compile Include="Data\AdapterUpdateStates.cs" />
+    <Compile Include="Data\AttributeDescriptorEnumValue.cs" />
+    <Compile Include="Data\AttributeDescriptorValueTypes.cs" />
+    <Compile Include="Data\ISubstitution.cs" />
+    <Compile Include="Data\ISubstitutionArgument.cs" />
+    <Compile Include="Data\ISubstitutionArgumentValuesSet.cs" />
+    <Compile Include="Data\ISubstitutionInputArgument.cs" />
+    <Compile Include="Data\ISubstitutionInputArgumentValue.cs" />
+    <Compile Include="Data\ISubstitutionOutputArgument.cs" />
+    <Compile Include="Data\ITriggerAction.cs" />
+    <Compile Include="Data\ITriggerArgument.cs" />
+    <Compile Include="Dto\TriggerAction.cs" />
+    <Compile Include="Dto\TriggerActionArgument.cs" />
+    <Compile Include="Dto\TriggerArgument.cs" />
+    <Compile Include="Dto\Trigger.cs" />
+    <Compile Include="Dto\SubstitutionArgument.cs" />
+    <Compile Include="Dto\SubstitutionArgumentValue.cs" />
+    <Compile Include="Dto\SubstitutionArgumentValuesSet.cs" />
+    <Compile Include="Dto\SubstitutionInputArgument.cs" />
+    <Compile Include="Dto\SubstitutionOutputArgument.cs" />
+    <Compile Include="Services\IBrokerSettingsService.cs" />
+    <Compile Include="Services\ISubstitutionsService.cs" />
+    <Compile Include="Services\ITriggersService.cs" />
+    <Compile Include="Data\TypeDescriptorKind.cs" />
+    <Compile Include="Services\IAdaptersService.cs" />
+    <Compile Include="Data\KursLicenseInfo.cs" />
+    <Compile Include="Services\IKursLicenceService.cs" />
+    <Compile Include="Dto\Substitution.cs" />
+    <Compile Include="Settings\BrokerSettings.cs" />
+    <Compile Include="Settings\EsbAdminSettings.cs" />
+    <Compile Include="Settings\EsbNodeSettings.cs" />
+    <Compile Include="Settings\EsbPrivateSettings.cs" />
+    <Compile Include="Settings\EsbFederationSettings.cs" />
+    <Compile Include="Services\IFederationSettingsService.cs" />
+    <Compile Include="Data\ITriggerActionArgument.cs" />
+    <Compile Include="Data\ISubstitutionOutputArgumentValue.cs" />
+    <Compile Include="Data\IAttributeDescriptor.cs" />
+    <Compile Include="Data\ITypeDescriptor.cs" />
+    <Compile Include="Data\ITrigger.cs" />
+    <Compile Include="Data\IAdapter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings\EsbNodePlacement.cs" />
+    <Compile Include="Settings\EsbPublicSettings.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
