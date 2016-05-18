@@ -14,13 +14,6 @@ namespace Kurs.Api.Server.Services
         EsbFederationSettings Read();
 
         /// <summary>
-        /// Обновление настроек Federation
-        /// </summary>
-        /// <param name="settings"></param>
-        /// <returns></returns>
-        EsbFederationSettings Update( EsbFederationSettings settings );
-
-        /// <summary>
         /// Метод создания узла в Federation
         /// </summary>
         /// <param name="node"></param>

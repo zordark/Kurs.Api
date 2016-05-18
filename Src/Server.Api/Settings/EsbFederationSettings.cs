@@ -10,6 +10,6 @@ namespace Kurs.Api.Server.Settings
         /// <summary>
         /// Îáúåêòû ÏÀÊ ÊÓĞÑ
         /// </summary>
-        public IEnumerable<EsbNodeSettings> Nodes { get; set; }
+        public ICollection<EsbNodeSettings> Nodes { get; set; }
     }
 }
