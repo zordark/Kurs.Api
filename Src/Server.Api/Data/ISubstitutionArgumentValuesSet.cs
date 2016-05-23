@@ -17,8 +17,14 @@ namespace Kurs.Api.Server.Data
         /// </summary>
         int Order { get; }
 
-        IEnumerable<ISubstitutionInputArgumentValue> InputValues { get; }
+        /// <summary>
+        /// Значения входных аргументов
+        /// </summary>
+        IEnumerable<ISubstitutionArgumentValue> InputValues { get; }
 
-        IEnumerable<ISubstitutionOutputArgumentValue> OutputValues { get; }
+        /// <summary>
+        /// Значения выходных аргументов
+        /// </summary>
+        IEnumerable<ISubstitutionArgumentValue> OutputValues { get; }
     }
 }

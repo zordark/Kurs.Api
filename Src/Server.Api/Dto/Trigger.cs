@@ -27,7 +27,7 @@ namespace Kurs.Api.Server.Dto
 
         /// <summary>
         /// Описатель сообытия адаптера, с которым связан триггер. После создания триггера изменен быть не может
-        /// <see cref="IAttributeDescriptor"/>
+        /// <see cref="ITypeDescriptor"/>
         /// </summary>
         public int EventDescriptorId { get; set; }
 

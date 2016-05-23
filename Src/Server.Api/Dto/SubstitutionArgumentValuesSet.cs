@@ -14,6 +14,14 @@ namespace Kurs.Api.Server.Dto
         /// </summary>
         public int Order { get; set; }
 
+        /// <summary>
+        /// Значения входных аргументов
+        /// </summary>
         public IEnumerable<SubstitutionArgumentValue> InputValues { get; set; }
+
+        /// <summary>
+        /// Значения выходных аргументов
+        /// </summary>
+        public IEnumerable<SubstitutionArgumentValue> OutputValues { get; set; }
     }
 }

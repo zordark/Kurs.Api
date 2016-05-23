@@ -27,12 +27,12 @@ namespace Kurs.Api.Server.Data
         /// <summary>
         /// Набор входных аргументов подстановки 
         /// </summary>
-        IEnumerable<ISubstitutionInputArgument> InputArguments { get; }
+        IEnumerable<ISubstitutionArgument> InputArguments { get; }
 
         /// <summary>
         /// Набор выходных аргументов подстановки
         /// </summary>
-        IEnumerable<ISubstitutionOutputArgument> OutputArguments { get; }
+        IEnumerable<ISubstitutionArgument> OutputArguments { get; }
 
         /// <summary>
         /// Набор значений входных и соответствующий им набор значений выходных аргументов

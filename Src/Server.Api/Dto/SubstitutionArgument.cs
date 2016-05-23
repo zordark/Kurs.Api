@@ -20,7 +20,7 @@ namespace Kurs.Api.Server.Dto
         public int AddributeDescriptorId { get; set; }
 
         /// <summary>
-        /// Порядок следования агрумента (для UI)
+        /// Порядок следования агрумента
         /// </summary>
         public int Order { get; set; }
     }

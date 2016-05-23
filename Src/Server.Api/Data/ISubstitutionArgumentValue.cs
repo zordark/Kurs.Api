@@ -1,13 +1,13 @@
 namespace Kurs.Api.Server.Data
 {
     /// <summary>
-    /// Значение входного аргумента подстановки
+    /// Значение аргумента подстановки
     /// </summary>
-    public interface ISubstitutionInputArgumentValue
+    public interface ISubstitutionArgumentValue
     {
         int Id { get; }
 
-        ISubstitutionInputArgument Argument { get; }
+        ISubstitutionArgument Argument { get; }
 
         /// <summary>
         /// Значение входного аргумента подстановки.

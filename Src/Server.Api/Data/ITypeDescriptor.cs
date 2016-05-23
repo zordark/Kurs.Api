@@ -8,6 +8,11 @@ namespace Kurs.Api.Server.Data
     /// </summary>
     public interface ITypeDescriptor
     {
+        int Id { get; }
+
+        /// <summary>
+        /// Глобальный идентификатор атрибута
+        /// </summary>
         string Uid { get; }
 
         TypeDescriptorKind Kind { get; }
@@ -37,6 +42,6 @@ namespace Kurs.Api.Server.Data
         /// <summary>
         /// Дочерние мета-типы (например 'ptz' для 'камеры')
         /// </summary>
-        ITypeDescriptor Childs { get; }
+        IEnumerable<ITypeDescriptor> Childs { get; }
     }
 }

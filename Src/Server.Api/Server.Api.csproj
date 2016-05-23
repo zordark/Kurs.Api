@@ -51,9 +51,7 @@
     <Compile Include="Data\ISubstitution.cs" />
     <Compile Include="Data\ISubstitutionArgument.cs" />
     <Compile Include="Data\ISubstitutionArgumentValuesSet.cs" />
-    <Compile Include="Data\ISubstitutionInputArgument.cs" />
-    <Compile Include="Data\ISubstitutionInputArgumentValue.cs" />
-    <Compile Include="Data\ISubstitutionOutputArgument.cs" />
+    <Compile Include="Data\ISubstitutionArgumentValue.cs" />
     <Compile Include="Data\ITriggerAction.cs" />
     <Compile Include="Data\ITriggerArgument.cs" />
     <Compile Include="Dto\TriggerAction.cs" />
@@ -63,8 +61,6 @@
     <Compile Include="Dto\SubstitutionArgument.cs" />
     <Compile Include="Dto\SubstitutionArgumentValue.cs" />
     <Compile Include="Dto\SubstitutionArgumentValuesSet.cs" />
-    <Compile Include="Dto\SubstitutionInputArgument.cs" />
-    <Compile Include="Dto\SubstitutionOutputArgument.cs" />
     <Compile Include="Services\IBrokerSettingsService.cs" />
     <Compile Include="Services\ISubstitutionsService.cs" />
     <Compile Include="Services\ITriggersService.cs" />
@@ -80,7 +76,6 @@
     <Compile Include="Settings\EsbFederationSettings.cs" />
     <Compile Include="Services\IFederationSettingsService.cs" />
     <Compile Include="Data\ITriggerActionArgument.cs" />
-    <Compile Include="Data\ISubstitutionOutputArgumentValue.cs" />
     <Compile Include="Data\IAttributeDescriptor.cs" />
     <Compile Include="Data\ITypeDescriptor.cs" />
     <Compile Include="Data\ITrigger.cs" />

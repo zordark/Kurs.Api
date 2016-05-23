@@ -19,6 +19,11 @@ namespace Kurs.Api.Server.Dto
         public int DescriptorId { get; set; }
 
         /// <summary>
+        /// Включает или отключает фильтр по этому аргументу
+        /// </summary>
+        public bool Enabled { get; set; }
+
+        /// <summary>
         /// Значение для сравнения со значением атрибута события, указанного в EventArgumentDescriptor
         /// </summary>
         public string SimpleCompare { get; set; }

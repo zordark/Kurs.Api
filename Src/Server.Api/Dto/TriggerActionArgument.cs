@@ -19,8 +19,13 @@ namespace Kurs.Api.Server.Dto
         public int DescriptorId { get; set; }
 
         /// <summary>
+        /// Включает ручную установку значения аргумента. 
+        /// Если false, то значение аргумента должно обязательно быть определено подстановкой)
+        /// </summary>
+        public bool Enabled { get; set; }
+
+        /// <summary>
         /// Значение для аргумента команды
-        /// Если значение null, то значение соответствующего аргумента должно обязательно быть определено подстановкой
         /// </summary>
         public string Value { get; set; }
     }

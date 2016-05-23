@@ -10,13 +10,12 @@ namespace Kurs.Api.Server.Dto
         public int Id { get; set; }
 
         /// <summary>
-        /// Аргумент подстановки, с которым связано значение 
-        /// <see cref="SubstitutionArgument"/>
+        /// Ссылка на аргумент подстановки, с которым связано значение 
         /// </summary>
-        public int ArgumentId { get; set; }
+        public SubstitutionArgument Argument { get; set; }
 
         /// <summary>
-        /// Определяет константное значение аргумента.
+        /// Определяет значение аргумента.
         /// </summary>
         public string Value { get; set; }
     }
