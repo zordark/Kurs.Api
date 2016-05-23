@@ -17,7 +17,7 @@ namespace Kurs.Api.Server.Dto
         /// ќписатель атрибута, с которым св€зан аргумент подстановки.
         /// <see cref="IAttributeDescriptor"/>
         /// </summary>
-        public int AddributeDescriptorId { get; set; }
+        public int AttributeDescriptorId { get; set; }
 
         /// <summary>
         /// ѕор€док следовани€ агрумента
