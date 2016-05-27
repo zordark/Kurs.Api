@@ -8,11 +8,6 @@ namespace Kurs.Api.Server.Dto
     public class TriggerArgument
     {
         /// <summary>
-        /// Идентификатор аргумента триггера
-        /// </summary>
-        public int Id { get; set; }
-
-        /// <summary>
         /// Описатель атрибута события, с которым связан аргумент ториггера.
         /// <see cref="IAttributeDescriptor"/>
         /// </summary>

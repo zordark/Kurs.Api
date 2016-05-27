@@ -25,7 +25,7 @@ namespace Kurs.Api.Server.Data
         string Hint { get; set; }
 
         /// <summary>
-        /// Описатель события адаптера, с которым связан триггер. После создания триггера изменен быть не может
+        /// Описатель события адаптера, с которым связан триггер
         /// </summary>
         ITypeDescriptor EventDescriptor { get; }
 

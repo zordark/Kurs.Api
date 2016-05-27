@@ -30,11 +30,6 @@ namespace Kurs.Api.Server.Data
         IAdapter Adapter { get; }
 
         /// <summary>
-        /// Родительский мета-тип (например 'камера' для 'ptz')
-        /// </summary>
-        ITypeDescriptor ParentType { get; }
-
-        /// <summary>
         /// Получить список атрибутов типа
         /// </summary>
         IEnumerable<IAttributeDescriptor> Attributes { get; }

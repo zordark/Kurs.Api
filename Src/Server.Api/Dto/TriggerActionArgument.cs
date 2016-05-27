@@ -8,11 +8,6 @@ namespace Kurs.Api.Server.Dto
     public class TriggerActionArgument
     {
         /// <summary>
-        /// идентификатор аргумента реакции
-        /// </summary>
-        public int Id { get; set; }
-
-        /// <summary>
         /// Описатель аргумента команды.
         /// <see cref="IAttributeDescriptor"/>
         /// </summary>

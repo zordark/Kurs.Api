@@ -34,7 +34,7 @@ namespace Kurs.Api.Server.Services
         /// Набор описателей событий адаптеров доступных для выбора в качестве EventDescriptor триггера <see cref="ITrigger"/>>
         /// </summary>
         /// <returns></returns>
-        IEnumerable<ITypeDescriptor> GeAllowTriggerDescriptors();
+        IEnumerable<ITypeDescriptor> GetAllowTriggerDescriptors();
 
         /// <summary>
         /// Набор подстановок, допустимых для добавления в <see cref="TriggerAction.SubstitutionIds"/> >
@@ -57,5 +57,12 @@ namespace Kurs.Api.Server.Services
         /// <param name="triggerActionArgumentDescriptorId">Id-дескриптора аргумента реакции триггера <see cref="TriggerActionArgument.DescriptorId"/>> </param>
         /// <returns>Набор элементов (значение, отображаемое значение). Если ограничений на выбор значения аргумента нет, то null</returns>
         IEnumerable<KeyValuePair<string, string>> GetAllowTriggerActionArgumentValues( int triggerActionArgumentDescriptorId );
+
+        /// <summary>
+        /// Набор команд, которые можно отправить адаптеру
+        /// </summary>
+        /// <param name="adapterId">Id-адаптера</param>
+        /// <returns>Набор элементов (значение, отображаемое значение). Если ограничений на выбор значения аргумента нет, то null</returns>
+        IEnumerable<ITypeDescriptor> GetAdapterCommands( int adapterId );
     }
 }
