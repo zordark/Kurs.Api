@@ -7,10 +7,10 @@ namespace Kurs.Api.Server.Data
     /// </summary>
     public interface ITriggerActionArgument
     {
-        /// <summary>
-        /// идентификатор аргумента реакции
-        /// </summary>
-        int Id { get; }
+//        /// <summary>
+//        /// идентификатор аргумента реакции
+//        /// </summary>
+//        int Id { get; }
 
         /// <summary>
         /// Описатель аргумента команды

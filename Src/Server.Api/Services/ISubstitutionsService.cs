@@ -1,10 +1,11 @@
 using System.Collections.Generic;
 using Kurs.Api.Server.Data;
 using Kurs.Api.Server.Dto;
+using Kurs.Api.Services;
 
 namespace Kurs.Api.Server.Services
 {
-    public interface ISubstitutionsService
+    public interface ISubstitutionsService : IKursApiService
     {
         IEnumerable<ISubstitution> Substitutions { get; }
 

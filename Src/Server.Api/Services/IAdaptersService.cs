@@ -1,9 +1,10 @@
 using System.Collections.Generic;
 using Kurs.Api.Server.Data;
+using Kurs.Api.Services;
 
 namespace Kurs.Api.Server.Services
 {
-    public interface IAdaptersService
+    public interface IAdaptersService : IKursApiService
     {
         /// <summary>
         /// Список всех адаптеров

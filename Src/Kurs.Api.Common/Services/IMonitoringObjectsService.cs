@@ -7,7 +7,7 @@ namespace Kurs.Api.Services
     /// <summary>
     /// сервис объектов мониторинга (которые должны отображаться на дашбордах)
     /// </summary>
-    public interface IMonitoringObjectsService
+    public interface IMonitoringObjectsService : IKursApiService
     {
         /// <summary>
         /// Список типов объектов мониторинга

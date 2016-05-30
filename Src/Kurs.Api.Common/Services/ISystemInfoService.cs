@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace Kurs.Api.Services
 {
-    public interface ISystemInfoService
+    public interface ISystemInfoService : IKursApiService
     {
         /// <summary>
         /// Получение списка зарегестрированных адаптеров

@@ -1,11 +1,12 @@
 using Kurs.Api.Server.Settings;
+using Kurs.Api.Services;
 
 namespace Kurs.Api.Server.Services
 {
     /// <summary>
     /// Настройки сети объктов ПАК КУРС
     /// </summary>
-    public interface IFederationSettingsService
+    public interface IFederationSettingsService : IKursApiService
     {
         /// <summary>
         /// Метод чтения настроек узлов для Federation

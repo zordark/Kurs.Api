@@ -1,10 +1,11 @@
 using System.Collections.Generic;
 using Kurs.Api.Server.Data;
 using Kurs.Api.Server.Dto;
+using Kurs.Api.Services;
 
 namespace Kurs.Api.Server.Services
 {
-    public interface ITriggersService
+    public interface ITriggersService : IKursApiService
     {
         IEnumerable<ITrigger> Triggers { get; }
 
@@ -48,15 +49,19 @@ namespace Kurs.Api.Server.Services
         /// Набор значений, допустимых для выбора в качестве значения аргумента триггера>
         /// </summary>
         /// <param name="triggerArgumentDescriptorId">Id-дескриптора аргумента триггера <see cref="TriggerArgument.DescriptorId"/>> </param>
+        /// <param name="parentArgumentKeyOfValue">Значение ключа родительского аргумента. Необходим для корректного определения допустимых значений зависимого аргумента. 
+        /// Например, если надо выбрать "Пресет камеры", то надо передать значение выбранное для аргумента "Камера"</param>
         /// <returns>Набор элементов (значение, отображаемое значение). Если ограничений на выбор значения аргумента нет, то null</returns>
-        IEnumerable<KeyValuePair<string, string>> GetAllowTriggerArgumentValues( int triggerArgumentDescriptorId );
+        Dictionary<string, string> GetAllowTriggerArgumentValues( int triggerArgumentDescriptorId, string parentArgumentKeyOfValue );
 
         /// <summary>
         /// Набор значений, допустимых для выбора в качестве значения аргумента команды триггера>
         /// </summary>
         /// <param name="triggerActionArgumentDescriptorId">Id-дескриптора аргумента реакции триггера <see cref="TriggerActionArgument.DescriptorId"/>> </param>
+        /// <param name="parentArgumentKeyOfValue">Значение ключа родительского аргумента. Необходим для корректного определения допустимых значений зависимого аргумента. 
+        /// Например, если надо выбрать "Пресет камеры", то надо передать значение выбранное для аргумента "Камера"</param>
         /// <returns>Набор элементов (значение, отображаемое значение). Если ограничений на выбор значения аргумента нет, то null</returns>
-        IEnumerable<KeyValuePair<string, string>> GetAllowTriggerActionArgumentValues( int triggerActionArgumentDescriptorId );
+        Dictionary<string, string> GetAllowTriggerActionArgumentValues( int triggerActionArgumentDescriptorId, string parentArgumentKeyOfValue );
 
         /// <summary>
         /// Набор команд, которые можно отправить адаптеру

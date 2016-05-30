@@ -5,10 +5,10 @@
     /// </summary>
     public interface ITriggerArgument
     {
-        /// <summary>
-        /// Идентификатор аргумента триггера
-        /// </summary>
-        int Id { get; }
+//        /// <summary>
+//        /// Идентификатор аргумента триггера
+//        /// </summary>
+//        int Id { get; }
 
         /// <summary>
         /// Описатель атрибута события, с которым связан аргумент ториггера
