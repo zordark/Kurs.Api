@@ -5,9 +5,9 @@ namespace Kurs.Api.Monitoring
     public interface IMonitoringObjectType
     {
         /// <summary>
-        /// UID этого типа
+        /// Идентификатор этого типа
         /// </summary>
-        string Uid { get; }
+        int Id { get; }
 
         /// <summary>
         /// Человеческое имя типа объекта, например "Камера" или "Датчик"

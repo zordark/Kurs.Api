@@ -30,31 +30,30 @@ namespace Kurs.Api.Services
         /// <summary>
         /// Найти объект по его uid
         /// </summary>
-        IMonitoringObject Find( string uid );
-
-        /// <summary>
-        /// Объект появился
-        /// </summary>
-        event EventHandler<MonitoringObjectEventArgs> Created;
-
-        /// <summary>
-        /// Объект удален
-        /// </summary>
-        event EventHandler<MonitoringObjectEventArgs> Removed;
+        IMonitoringObject Find( int objectId );
 
         /// <summary>
         /// Объект изменился
         /// </summary>
-        event EventHandler<MonitoringObjectEventArgs> Changed;
+        IObservable<MonitoringObjectChanged> Changed { get; }
     }
 
-    public class MonitoringObjectEventArgs : EventArgs
+    public class MonitoringObjectChanged
     {
-        public MonitoringObjectEventArgs( IMonitoringObject monitoringObject )
+        public MonitoringObjectChanged( IMonitoringObject monitoringObject, ChangeTypes changeType )
         {
             Object = monitoringObject;
+            ChangeType = changeType;
         }
 
-        public IMonitoringObject Object { get; private set; }
+        public IMonitoringObject Object { get; }
+        public ChangeTypes ChangeType { get;  }
+
+        public enum ChangeTypes
+        {
+            Created,
+            Changed,
+            Deleted,
+        }
     }
 }

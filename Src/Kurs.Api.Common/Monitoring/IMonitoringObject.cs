@@ -8,9 +8,9 @@ namespace Kurs.Api.Monitoring
     public interface IMonitoringObject
     {
         /// <summary>
-        /// Глобальный идентификатор объекта
+        /// Идентификатор объекта
         /// </summary>
-        string Uid { get; }
+        int Id { get; }
 
         /// <summary>
         /// Тип объекта
