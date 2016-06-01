@@ -42,5 +42,14 @@ namespace Kurs.Api.Server.Services
         /// </summary>
         /// <returns></returns>
         IEnumerable<IAttributeDescriptor> GetAllowOutputAgrumentDescriptors();
+
+        /// <summary>
+        /// Набор значений, допустимых для выбора в качестве значения аргумента триггера>
+        /// </summary>
+        /// <param name="argumentDescriptorId">Id-дескриптора аргумента подстановки</param>
+        /// <param name="parentArgumentKeyOfValue">Значение ключа родительского аргумента. Необходим для корректного определения допустимых значений зависимого аргумента. 
+        /// Например, если надо выбрать "Пресет камеры", то надо передать значение выбранное для аргумента "Камера"</param>
+        /// <returns>Набор элементов (значение, отображаемое значение). Если ограничений на выбор значения аргумента нет, то null</returns>
+        Dictionary<string, string> GetAllowArgumentValues( int argumentDescriptorId, string parentArgumentKeyOfValue );
     }
 }

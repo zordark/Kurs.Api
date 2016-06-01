@@ -27,7 +27,8 @@ namespace Kurs.Api.Server.Data
         AttributeDescriptorValueTypes ValueType { get; }
 
         /// <summary>
-        /// Для простых типов содержит список допустимых значений
+        /// Для простых типов может содержать список допустимых значений.
+        /// Если ограничений нет, то null
         /// </summary>
         IEnumerable<AttributeDescriptorEnumValue> AllowValues { get; }
 
