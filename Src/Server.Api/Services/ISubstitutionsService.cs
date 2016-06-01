@@ -32,16 +32,16 @@ namespace Kurs.Api.Server.Services
         ISubstitution Update( Substitution substitution );
 
         /// <summary>
-        /// —писок всех описателей атрибутов событий доступных дл€ выбора в качестве входных аргументов дл€ подстановок.
+        /// Ќабор всех описателей атрибутов событий доступных дл€ выбора в качестве входных аргументов дл€ подстановок, сгруппированных по событию.
         /// </summary>
         /// <returns></returns>
-        IEnumerable<IAttributeDescriptor> GetAllowInputAgrumentDescriptors();
+        Dictionary<ITypeDescriptor, IEnumerable<IAttributeDescriptor>> GetAllowInputAgrumentDescriptors();
 
         /// <summary>
-        /// —писок всех описателей атрибутов команд доступных дл€ выбора в качестве выходных аргументов дл€ подстановок.
+        /// Ќабор всех описателей атрибутов команд доступных дл€ выбора в качестве выходных аргументов дл€ подстановок, сгруппированных по команде.
         /// </summary>
         /// <returns></returns>
-        IEnumerable<IAttributeDescriptor> GetAllowOutputAgrumentDescriptors();
+        Dictionary<ITypeDescriptor, IEnumerable<IAttributeDescriptor>> GetAllowOutputAgrumentDescriptors();
 
         /// <summary>
         /// Ќабор значений, допустимых дл€ выбора в качестве значени€ аргумента триггера>
