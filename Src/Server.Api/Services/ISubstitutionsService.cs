@@ -24,24 +24,29 @@ namespace Kurs.Api.Server.Services
         /// <summary>
         /// Создать новую подстановку
         /// </summary>
-        ISubstitution Create( Substitution substitution );
+        OperationResult<ISubstitution, SubstitutionValidationErrors> Create( Substitution substitution );
 
         /// <summary>
         /// Обновить подстановку
         /// </summary>
-        ISubstitution Update( Substitution substitution );
+        OperationResult<ISubstitution, SubstitutionValidationErrors> Update( Substitution substitution );
+
+        /// <summary>
+        /// Провалидировать реакцию триггера
+        /// </summary>
+        ActionValidationErrors ValidateAction( int triggerDescriptorId, TriggerAction action );
 
         /// <summary>
         /// Набор всех описателей атрибутов событий доступных для выбора в качестве входных аргументов для подстановок, сгруппированных по событию.
         /// </summary>
         /// <returns></returns>
-        Dictionary<ITypeDescriptor, IEnumerable<IAttributeDescriptor>> GetAllowInputAgrumentDescriptors();
+        Dictionary<ITypeDescriptor, IEnumerable<IAttributeDescriptor>> GetAllowAgrumentDescriptors( bool isInput, IEnumerable<int> attributeDescriptorIds );
 
-        /// <summary>
-        /// Набор всех описателей атрибутов команд доступных для выбора в качестве выходных аргументов для подстановок, сгруппированных по команде.
-        /// </summary>
-        /// <returns></returns>
-        Dictionary<ITypeDescriptor, IEnumerable<IAttributeDescriptor>> GetAllowOutputAgrumentDescriptors();
+//        /// <summary>
+//        /// Набор всех описателей атрибутов команд доступных для выбора в качестве выходных аргументов для подстановок, сгруппированных по команде.
+//        /// </summary>
+//        /// <returns></returns>
+//        Dictionary<ITypeDescriptor, IEnumerable<IAttributeDescriptor>> GetAllowOutputAgrumentDescriptors( IEnumerable<int> attributeDescriptorIds );
 
         /// <summary>
         /// Набор значений, допустимых для выбора в качестве значения аргумента триггера>

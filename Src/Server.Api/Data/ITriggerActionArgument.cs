@@ -24,8 +24,13 @@ namespace Kurs.Api.Server.Data
         bool Enabled { get; }
 
         /// <summary>
-        /// Значение для аргумента команды
+        /// Реальное значение для аргумента команды
         /// </summary>
         string Value { get; }
+
+        /// <summary>
+        /// Отображаемое значение для аргумента команды
+        /// </summary>
+        string DisplayValue { get; set; }
     }
 }

@@ -26,6 +26,11 @@
         string SimpleCompare { get; }
 
         /// <summary>
+        /// Отображаемое значение для SimpleCompare
+        /// </summary>
+        string DisplayValue { get; set; }
+
+        /// <summary>
         /// Регулярное выражение для сравнения со значением атрибута события, указанного в EventArgumentDescriptor
         /// </summary>
         string RegexCompare { get; }

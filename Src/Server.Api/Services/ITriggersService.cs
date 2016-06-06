@@ -24,12 +24,12 @@ namespace Kurs.Api.Server.Services
         /// <summary>
         /// Создать новый триггер
         /// </summary>
-        ITrigger Create( Trigger trigger );
+        OperationResult<ITrigger, TriggerValidationErrors> Create( Trigger trigger );
 
         /// <summary>
         /// Обновить триггер
         /// </summary>
-        ITrigger Update( Trigger trigger );
+        OperationResult<ITrigger, TriggerValidationErrors> Update( Trigger trigger );
 
         /// <summary>
         /// Набор описателей событий адаптеров доступных для выбора в качестве EventDescriptor триггера <see cref="ITrigger"/>>
@@ -43,7 +43,15 @@ namespace Kurs.Api.Server.Services
         /// <param name="triggerDescriptorId">Id-дескриптора триггера</param>
         /// <param name="actionDescriptorId">Id-дескриптора реакции</param>
         /// <returns></returns>
-        IEnumerable<ISubstitution> GetAllowActionSubstitutions( int triggerDescriptorId, int actionDescriptorId);
+        IEnumerable<ISubstitution> GetAllowActionSubstitutions( int triggerDescriptorId, int actionDescriptorId );
+
+        /// <summary>
+        /// Набор аргументов команды, которые остались неопределенными с помощью указанных подстановок>
+        /// </summary>
+        /// <param name="actionDescriptorId">Id-дескриптора реакции</param>
+        /// <param name="substitutionIds">набор Id подстановок реакции</param>
+        /// <returns></returns>
+        IEnumerable<ISubstitution> GetNotDefinedActionArguments( int actionDescriptorId, IEnumerable<int> substitutionIds );
 
         /// <summary>
         /// Набор значений, допустимых для выбора в качестве значения аргумента триггера>

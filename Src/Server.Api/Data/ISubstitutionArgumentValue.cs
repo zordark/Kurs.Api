@@ -12,6 +12,11 @@ namespace Kurs.Api.Server.Data
         /// <summary>
         /// Значение входного аргумента подстановки.
         /// </summary>
-        string Value { get; set; }
+        string Value { get; }
+
+        /// <summary>
+        /// Значение входного аргумента подстановки.
+        /// </summary>
+        string DisplayValue { get; }
     }
 }

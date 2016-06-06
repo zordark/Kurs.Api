@@ -60,6 +60,7 @@
     <Compile Include="Dto\SubstitutionArgument.cs" />
     <Compile Include="Dto\SubstitutionArgumentValue.cs" />
     <Compile Include="Dto\SubstitutionArgumentValuesSet.cs" />
+    <Compile Include="Services\ActionValidationErrors.cs" />
     <Compile Include="Services\IBrokerSettingsService.cs" />
     <Compile Include="Services\ISubstitutionsService.cs" />
     <Compile Include="Services\ITriggersService.cs" />
@@ -68,6 +69,9 @@
     <Compile Include="Data\KursLicenseInfo.cs" />
     <Compile Include="Services\IKursLicenceService.cs" />
     <Compile Include="Dto\Substitution.cs" />
+    <Compile Include="Services\OperationResult.cs" />
+    <Compile Include="Services\SubstitutionValidationErrors.cs" />
+    <Compile Include="Services\TriggerValidationErrors.cs" />
     <Compile Include="Settings\BrokerSettings.cs" />
     <Compile Include="Settings\EsbAdminSettings.cs" />
     <Compile Include="Settings\EsbNodeSettings.cs" />
