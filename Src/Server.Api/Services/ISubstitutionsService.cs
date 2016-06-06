@@ -37,10 +37,12 @@ namespace Kurs.Api.Server.Services
         ActionValidationErrors ValidateAction( int triggerDescriptorId, TriggerAction action );
 
         /// <summary>
-        /// Ќабор всех описателей атрибутов событий доступных дл€ выбора в качестве входных аргументов дл€ подстановок, сгруппированных по событию.
+        /// Ќабор всех описателей атрибутов событий, доступных дл€ выбора в качестве входных/выходных аргументов дл€ подстановок
         /// </summary>
+        /// <param name="isInput">true - требуютс€ входные, false - выходные</param>
+        /// <param name="attributeDescriptorIds">набор дескрипторов атрибутов, которые уже выбраны</param>
         /// <returns></returns>
-        Dictionary<ITypeDescriptor, IEnumerable<IAttributeDescriptor>> GetAllowAgrumentDescriptors( bool isInput, IEnumerable<int> attributeDescriptorIds );
+        IEnumerable<IAttributeDescriptor> GetAllowAgrumentDescriptors( bool isInput, IEnumerable<int> attributeDescriptorIds );
 
 //        /// <summary>
 //        /// Ќабор всех описателей атрибутов команд доступных дл€ выбора в качестве выходных аргументов дл€ подстановок, сгруппированных по команде.

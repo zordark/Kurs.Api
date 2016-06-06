@@ -51,7 +51,7 @@ namespace Kurs.Api.Server.Services
         /// <param name="actionDescriptorId">Id-дескриптора реакции</param>
         /// <param name="substitutionIds">набор Id подстановок реакции</param>
         /// <returns></returns>
-        IEnumerable<ISubstitution> GetNotDefinedActionArguments( int actionDescriptorId, IEnumerable<int> substitutionIds );
+        IEnumerable<IAttributeDescriptor> GetNotDefinedActionArguments( int actionDescriptorId, IEnumerable<int> substitutionIds );
 
         /// <summary>
         /// Набор значений, допустимых для выбора в качестве значения аргумента триггера>

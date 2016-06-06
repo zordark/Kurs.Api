@@ -31,6 +31,6 @@ namespace Kurs.Api.Server.Data
         /// <summary>
         /// Отображаемое значение для аргумента команды
         /// </summary>
-        string DisplayValue { get; set; }
+        string DisplayValue { get; }
     }
 }

@@ -2,6 +2,8 @@
 {
     public enum TypeDescriptorKind
     {
+        Virtual,
+
         /// <summary>
         /// System Description
         /// </summary>
