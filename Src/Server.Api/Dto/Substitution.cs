@@ -38,5 +38,22 @@ namespace Kurs.Api.Server.Dto
         /// Задается только в случае, если AutoMapping = false
         /// </summary>
         public IEnumerable<SubstitutionArgumentValuesSet> ArgumentValues { get; set; }
+
+
+//        /// <summary>
+//        /// Набор входных аргументов подстановки (AttributeDescriptorID)
+//        /// </summary>
+//        public IEnumerable<int> InputArguments { get; set; }
+//
+//        /// <summary>
+//        /// Набор выходных аргументов подстановки (AttributeDescriptorID)
+//        /// </summary>
+//        public IEnumerable<int> OutputArguments { get; set; }
+//
+//        /// <summary>
+//        /// Набор значений входных и соответствующий им набор значений выходных аргументов.
+//        /// Задается только в случае, если AutoMapping = false
+//        /// </summary>
+//        public IEnumerable<Dictionary<int,string>> ArgumentValues { get; set; }
     }
 }
