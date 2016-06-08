@@ -32,6 +32,11 @@ namespace Kurs.Api.Server.Services
         OperationResult<ITrigger, TriggerValidationErrors> Update( Trigger trigger );
 
         /// <summary>
+        /// Провалидировать реакцию триггера
+        /// </summary>
+        ActionValidationErrors ValidateAction( int triggerDescriptorId, TriggerAction action );
+
+        /// <summary>
         /// Набор описателей событий адаптеров доступных для выбора в качестве EventDescriptor триггера <see cref="ITrigger"/>>
         /// </summary>
         /// <returns></returns>

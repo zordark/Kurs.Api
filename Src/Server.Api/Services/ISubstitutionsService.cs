@@ -32,23 +32,17 @@ namespace Kurs.Api.Server.Services
         OperationResult<ISubstitution, SubstitutionValidationErrors> Update( Substitution substitution );
 
         /// <summary>
-        /// ѕровалидировать реакцию триггера
+        /// Ќабор всех описателей атрибутов событий/команд, доступных дл€ выбора в качестве входных/выходных аргументов дл€ подстановок
         /// </summary>
-        ActionValidationErrors ValidateAction( int triggerDescriptorId, TriggerAction action );
-
-        /// <summary>
-        /// Ќабор всех описателей атрибутов событий, доступных дл€ выбора в качестве входных/выходных аргументов дл€ подстановок
-        /// </summary>
-        /// <param name="isInput">true - требуютс€ входные, false - выходные</param>
-        /// <param name="attributeDescriptorIds">набор дескрипторов атрибутов, которые уже выбраны</param>
+        /// <param name="isInput">true - требуютс€ входные, false - выходные аргументы</param>
         /// <returns></returns>
-        IEnumerable<IAttributeDescriptor> GetAllowAgrumentDescriptors( bool isInput, IEnumerable<int> attributeDescriptorIds );
+        Dictionary<ITypeDescriptor, IEnumerable<IAttributeDescriptor>> GetAllowAgrumentDescriptors( bool isInput );
 
-//        /// <summary>
-//        /// Ќабор всех описателей атрибутов команд доступных дл€ выбора в качестве выходных аргументов дл€ подстановок, сгруппированных по команде.
-//        /// </summary>
-//        /// <returns></returns>
-//        Dictionary<ITypeDescriptor, IEnumerable<IAttributeDescriptor>> GetAllowOutputAgrumentDescriptors( IEnumerable<int> attributeDescriptorIds );
+        //        /// <summary>
+        //        /// Ќабор всех описателей атрибутов команд доступных дл€ выбора в качестве выходных аргументов дл€ подстановок, сгруппированных по команде.
+        //        /// </summary>
+        //        /// <returns></returns>
+        //        Dictionary<ITypeDescriptor, IEnumerable<IAttributeDescriptor>> GetAllowOutputAgrumentDescriptors( IEnumerable<int> attributeDescriptorIds );
 
         /// <summary>
         /// Ќабор значений, допустимых дл€ выбора в качестве значени€ аргумента триггера>
