@@ -32,6 +32,11 @@ namespace Kurs.Api.Server.Services
         OperationResult<ITrigger, TriggerValidationErrors> Update( Trigger trigger );
 
         /// <summary>
+        /// Включить/Выключить триггер
+        /// </summary>
+        OperationResult<ITrigger, TriggerValidationErrors> SetTriggerEnable( int triggerId, bool enable );
+
+        /// <summary>
         /// Провалидировать реакцию триггера
         /// </summary>
         ActionValidationErrors ValidateAction( int triggerDescriptorId, TriggerAction action );
@@ -59,7 +64,7 @@ namespace Kurs.Api.Server.Services
         IEnumerable<IAttributeDescriptor> GetNotDefinedActionArguments( int actionDescriptorId, IEnumerable<int> substitutionIds );
 
         /// <summary>
-        /// Набор значений, допустимых для выбора в качестве значения аргумента триггера>
+        /// Набор значений, допустимых для выбора в качестве значения аргумента триггера
         /// </summary>
         /// <param name="triggerArgumentDescriptorId">Id-дескриптора аргумента триггера <see cref="TriggerArgument.DescriptorId"/>> </param>
         /// <param name="parentArgumentKeyOfValue">Значение ключа родительского аргумента. Необходим для корректного определения допустимых значений зависимого аргумента. 

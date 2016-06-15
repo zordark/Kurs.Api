@@ -15,7 +15,7 @@ namespace Kurs.Api.Server.Data
         /// <summary>
         /// »м€ подстановки
         /// </summary>
-        string Name { get; set; }
+        string Name { get; }
 
         /// <summary>
         /// ѕризнак того, что подтсановка должна автоматически мапить входные аргументы в выходные, при этом

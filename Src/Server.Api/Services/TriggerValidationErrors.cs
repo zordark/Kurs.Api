@@ -17,6 +17,11 @@ namespace Kurs.Api.Server.Services
         public enum ErrorCodes
         {
             /// <summary>
+            /// Триггер не существует
+            /// </summary>
+            TriggerNotExist,
+
+            /// <summary>
             /// Триггер с указанным именем уже существует
             /// </summary>
             NameAlreadyExist,

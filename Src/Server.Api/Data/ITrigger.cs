@@ -12,17 +12,17 @@ namespace Kurs.Api.Server.Data
         /// <summary>
         /// Включить триггер в работу
         /// </summary>
-        bool Enable { get; set; }
+        bool Enable { get; }
 
         /// <summary>
         /// Название триггера
         /// </summary>
-        string Name { get; set; }
+        string Name { get; }
 
         /// <summary>
         /// Описание триггера
         /// </summary>
-        string Hint { get; set; }
+        string Hint { get; }
 
         /// <summary>
         /// Описатель события адаптера, с которым связан триггер

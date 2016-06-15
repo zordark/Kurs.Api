@@ -4,6 +4,8 @@
     {
         String,
         Int,
+        Double,
+        Float,
         Enum,
         Json
     }

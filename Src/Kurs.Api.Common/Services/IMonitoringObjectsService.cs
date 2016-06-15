@@ -5,7 +5,7 @@ using Kurs.Api.Monitoring;
 namespace Kurs.Api.Services
 {
     /// <summary>
-    /// сервис объектов мониторинга (которые должны отображаться на дашбордах)
+    /// Сервис объектов мониторинга (которые должны отображаться на дашбордах)
     /// </summary>
     public interface IMonitoringObjectsService : IKursApiService
     {
