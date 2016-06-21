@@ -48,6 +48,11 @@ namespace Kurs.Api.Server.Services
         IEnumerable<ITypeDescriptor> GetAllowTriggerDescriptors();
 
         /// <summary>
+        /// Набор команд, которые можно выбрать в качестве реакции для триггера, сгруппированных по адаптерам
+        /// </summary>
+        Dictionary<IAdapter, IEnumerable<ITypeDescriptor>> GetAllowTriggerActionDescriptors();
+
+        /// <summary>
         /// Набор подстановок, допустимых для добавления в <see cref="TriggerAction.SubstitutionIds"/> >
         /// </summary>
         /// <param name="triggerDescriptorId">Id-дескриптора триггера</param>
