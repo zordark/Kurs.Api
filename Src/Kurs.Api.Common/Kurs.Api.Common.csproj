@@ -90,6 +90,7 @@
     <Compile Include="AdapterDescriptor.cs" />
     <Compile Include="Monitoring\AlarmStatus.cs" />
     <Compile Include="Monitoring\IMonitoringObjectType.cs" />
+    <Compile Include="Services\ServiceOperationResult.cs" />
     <Compile Include="Services\IKursApiService.cs" />
     <Compile Include="Services\IMonitoringObjectsService.cs" />
     <Compile Include="Monitoring\IMonitoringObject.cs" />

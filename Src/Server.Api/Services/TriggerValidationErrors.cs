@@ -22,6 +22,11 @@ namespace Kurs.Api.Server.Services
             TriggerNotExist,
 
             /// <summary>
+            /// Имя не может быть пустым
+            /// </summary>
+            NameCannotBeEmpty,
+
+            /// <summary>
             /// Триггер с указанным именем уже существует
             /// </summary>
             NameAlreadyExist,
